@@ -1,6 +1,6 @@
 /**
  * Access gate — click the camera (flash), then a newspaper appears after 2s.
- * Skip also unlocks. Placeholder until the themed payment system replaces this.
+ * Skip also unlocks.
  */
 (function () {
   var gate = document.getElementById("payment-gate");
@@ -56,8 +56,13 @@
     timers.push(
       setTimeout(function () {
         if (unlocked) return;
+        var slot = gate.querySelector("[data-newspaper-slot]");
+        if (btn) {
+          btn.classList.add("is-printing-paper");
+        }
         if (paper) {
           paper.hidden = false;
+          if (slot) slot.classList.add("is-open");
           // double rAF so the print transition runs from the tucked state
           requestAnimationFrame(function () {
             requestAnimationFrame(function () {
@@ -70,7 +75,7 @@
           setTimeout(function () {
             if (hint) hint.textContent = "Press Corps copy ready.";
             unlock();
-          }, 2200)
+          }, 3800)
         );
       }, 2000)
     );
@@ -84,20 +89,19 @@
       '<div class="gate-screen payment-screen camera-screen" role="dialog" aria-labelledby="gate-title" aria-describedby="gate-desc">' +
       '<h2 id="gate-title">Delegate access</h2>' +
       '<p id="gate-desc" class="payment-desc">Tap the camera to take the shot.</p>' +
-      '<p class="payment-placeholder-note">Placeholder access gate — will be replaced with the themed payment system later.</p>' +
       '<div class="camera-scene" data-scene>' +
       '<div class="camera-stage">' +
-      '<div class="newspaper-slot" aria-hidden="true">' +
-      '<div class="newspaper-emoji" data-newspaper hidden>' +
-      '<img class="newspaper-img" src="assets/gate/newspaper.png?v=orig" alt="" draggable="false">' +
-      "</div>" +
-      "</div>" +
       '<button type="button" class="camera-btn" data-camera aria-label="Take a photo" aria-pressed="false">' +
       '<span class="camera-stack" aria-hidden="true">' +
       '<img class="camera-frame camera-frame--idle" src="assets/gate/camera.png?v=orig" alt="" draggable="false">' +
       '<img class="camera-frame camera-frame--flash" src="assets/gate/camera-flash.png?v=orig" alt="" draggable="false">' +
       "</span>" +
       "</button>" +
+      '<div class="newspaper-slot" data-newspaper-slot aria-hidden="true">' +
+      '<div class="newspaper-emoji" data-newspaper hidden>' +
+      '<img class="newspaper-img" src="assets/gate/newspaper.png?v=orig" alt="" draggable="false">' +
+      "</div>" +
+      "</div>" +
       "</div>" +
       "</div>" +
       '<p class="payment-hint" data-pay-hint>Click the camera to continue</p>' +

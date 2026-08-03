@@ -3363,28 +3363,37 @@ body.payment-open #site-app {
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 4;
-  background: #000;
-  border-radius: 20px;
-  overflow: hidden;
+  max-width: 420px;
+  margin-inline: auto;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  line-height: 0;
 }
 
 .camera-frame {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center 72%;
   display: block;
   pointer-events: none;
   user-select: none;
-  background: #000;
+  background: transparent;
   transition: opacity 0.05s linear;
 }
 
+.camera-frame--idle {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
 .camera-frame--flash {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 145%;
+  max-width: none;
+  height: auto;
   opacity: 0;
+  transform: translate(-50%, -52%);
 }
 
 .camera-btn.is-flashed .camera-frame--idle {
@@ -3445,7 +3454,7 @@ body.payment-open #site-app {
   height: auto;
   display: block;
   object-fit: contain;
-  background: #000;
+  background: transparent;
   border-radius: 6px;
   user-select: none;
 }

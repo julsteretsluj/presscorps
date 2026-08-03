@@ -85,12 +85,12 @@
       '<div class="camera-scene" data-scene>' +
       '<button type="button" class="camera-btn" data-camera aria-label="Take a photo" aria-pressed="false">' +
       '<span class="camera-stack" aria-hidden="true">' +
-      '<img class="camera-frame camera-frame--idle" src="assets/gate/camera.png" alt="" draggable="false">' +
-      '<img class="camera-frame camera-frame--flash" src="assets/gate/camera-flash.png" alt="" draggable="false">' +
+      '<img class="camera-frame camera-frame--idle" src="assets/gate/camera.png?v=orig" alt="" draggable="false">' +
+      '<img class="camera-frame camera-frame--flash" src="assets/gate/camera-flash.png?v=orig" alt="" draggable="false">' +
       "</span>" +
       "</button>" +
       '<div class="newspaper-emoji" data-newspaper hidden aria-hidden="true">' +
-      '<img class="newspaper-img" src="assets/gate/newspaper.png" alt="Newspaper" draggable="false">' +
+      '<img class="newspaper-img" src="assets/gate/newspaper.png?v=orig" alt="Newspaper" draggable="false">' +
       "</div>" +
       "</div>" +
       '<p class="payment-hint" data-pay-hint>Click the camera to continue</p>' +

@@ -58,16 +58,19 @@
         if (unlocked) return;
         if (paper) {
           paper.hidden = false;
-          paper.removeAttribute("aria-hidden");
+          // double rAF so the print transition runs from the tucked state
           requestAnimationFrame(function () {
-            paper.classList.add("is-visible");
+            requestAnimationFrame(function () {
+              paper.classList.add("is-printing");
+            });
           });
         }
-        if (hint) hint.textContent = "Press Corps copy incoming…";
+        if (hint) hint.textContent = "Printing…";
         timers.push(
           setTimeout(function () {
+            if (hint) hint.textContent = "Press Corps copy ready.";
             unlock();
-          }, 1200)
+          }, 2200)
         );
       }, 2000)
     );
@@ -83,14 +86,18 @@
       '<p id="gate-desc" class="payment-desc">Tap the camera to take the shot.</p>' +
       '<p class="payment-placeholder-note">Placeholder access gate — will be replaced with the themed payment system later.</p>' +
       '<div class="camera-scene" data-scene>' +
+      '<div class="camera-stage">' +
+      '<div class="newspaper-slot" aria-hidden="true">' +
+      '<div class="newspaper-emoji" data-newspaper hidden>' +
+      '<img class="newspaper-img" src="assets/gate/newspaper.png?v=orig" alt="" draggable="false">' +
+      "</div>" +
+      "</div>" +
       '<button type="button" class="camera-btn" data-camera aria-label="Take a photo" aria-pressed="false">' +
       '<span class="camera-stack" aria-hidden="true">' +
       '<img class="camera-frame camera-frame--idle" src="assets/gate/camera.png?v=orig" alt="" draggable="false">' +
       '<img class="camera-frame camera-frame--flash" src="assets/gate/camera-flash.png?v=orig" alt="" draggable="false">' +
       "</span>" +
       "</button>" +
-      '<div class="newspaper-emoji" data-newspaper hidden aria-hidden="true">' +
-      '<img class="newspaper-img" src="assets/gate/newspaper.png?v=orig" alt="Newspaper" draggable="false">' +
       "</div>" +
       "</div>" +
       '<p class="payment-hint" data-pay-hint>Click the camera to continue</p>' +

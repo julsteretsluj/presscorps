@@ -1070,6 +1070,159 @@ body.payment-open #site-app {
   font-size: 0.75rem;
 }
 
+/* Camera flash gate */
+.camera-scene {
+  position: relative;
+  margin-top: 1.25rem;
+  width: min(92vw, 520px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.camera-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 24px;
+  transition: transform 0.2s var(--ease-out, ease), filter 0.2s ease;
+}
+
+.camera-btn:hover:not(:disabled) {
+  transform: scale(1.02);
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.45));
+}
+
+.camera-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.camera-btn:disabled {
+  cursor: default;
+}
+
+.camera-btn.is-flashed {
+  filter: drop-shadow(0 0 28px rgba(251, 191, 36, 0.35));
+}
+
+.camera-stack {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.camera-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  background: transparent;
+  transition: opacity 0.05s linear;
+}
+
+.camera-frame--flash {
+  opacity: 0;
+}
+
+.camera-btn.is-flashed .camera-frame--idle {
+  opacity: 0;
+}
+
+.camera-btn.is-flashed .camera-frame--flash {
+  opacity: 1;
+  animation: camera-flash-pop 0.35s ease-out;
+}
+
+@keyframes camera-flash-pop {
+  0% {
+    filter: brightness(1);
+  }
+  35% {
+    filter: brightness(1.55);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+.newspaper-emoji {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  opacity: 0;
+  transform: translateY(12px) scale(0.92);
+  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.34, 1.2, 0.64, 1);
+  pointer-events: none;
+  width: min(72%, 280px);
+}
+
+.newspaper-emoji[hidden] {
+  display: flex !important;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.newspaper-emoji.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.newspaper-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.45));
+  user-select: none;
+}
+
+.payment-hint {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.payment-success {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #6ee7b7;
+}
+
+.payment-skip {
+  margin-top: 1.5rem;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.payment-skip:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 700px) {
+  .camera-scene {
+    width: min(92vw, 360px);
+  }
+}
+
+/* Legacy dove/cage styles kept unused */
 .cage-screen .payment-desc {
   max-width: 26rem;
 }

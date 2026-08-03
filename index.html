@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Press Corps — SEAMUN I 2027</title>
     <meta
       name="description"
-      content="Press Corps at SEAMUN I 2027 — specialized media committee for grades 7–12 and university. Topic, allocations, schedule, RoP, and submission portals."
+      content="Press Corps at SEAMUN I 2027. Journalistic ethics topic, news-outlet allocations, schedule, RoP, position papers, and chair report."
     />
     <link rel="icon" href="./favicon.png" type="image/png" sizes="32x32" />
     <link rel="icon" href="./assets/favicon-192.png" type="image/png" sizes="192x192" />
@@ -18,15 +18,13 @@
     <div id="payment-gate" hidden aria-hidden="true"></div>
 
     <div id="site-app" hidden aria-hidden="true">
-    <div class="announcement" id="announcement" role="region" aria-label="Conference announcement">
-      <div class="announcement-inner">
+    <div class="announcement" id="announcement" role="banner">
+      <div class="container announcement-inner">
         <p class="announcement-text">
-          <strong>SEAMUN I 2027</strong> — Grades 7–12 &amp; university MUN. January 16–17, D-PREP (Bang Phli).
-          <a href="https://www.seamun.com/forms.html#delegate" class="announcement-cta" target="_blank" rel="noopener noreferrer">Delegate Sign Up</a>
+          <strong>SEAMUN I 2027</strong> — Press Corps. January 16–17, D-PREP (Bang Phli).
+          <a class="announcement-cta" href="https://seamun.com/forms#delegate" target="_blank" rel="noopener noreferrer">Delegate Sign Up</a>
           ·
-          <a href="https://www.seamun.com/forms.html#advisor" class="announcement-cta" target="_blank" rel="noopener noreferrer">Advisor Sign Up</a>
-          ·
-          <a href="https://www.seamun.com/forms.html#chair" class="announcement-cta" target="_blank" rel="noopener noreferrer">Chair Application</a>
+          <a class="announcement-cta" href="https://seamun.com/forms#chair" target="_blank" rel="noopener noreferrer">Chair Application</a>
         </p>
         <button type="button" class="announcement-close" aria-label="Dismiss" data-close-announcement>×</button>
       </div>
@@ -34,135 +32,141 @@
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="#top" aria-label="Press Corps home">
-          <img class="logo-image" src="./assets/press-logo.png" alt="" width="36" height="36" />
+        <a class="logo" href="/">
+          <img class="logo-image" src="assets/press-logo.png" alt="Press Corps" />
           <span class="logo-text">Press Corps</span>
         </a>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"></button>
-        <nav class="nav" id="site-nav" aria-label="Primary">
+        <nav class="nav">
           <a href="#about">About</a>
           <a href="#topic">Topic</a>
           <a href="#allocations">Allocations</a>
           <a href="#schedule">Schedule</a>
           <a href="#resources">Resources</a>
-          <a href="#faq">FAQ</a>
-          <a class="btn-header" href="https://www.seamun.com/forms.html" target="_blank" rel="noopener noreferrer">Register</a>
+          <a href="#contact">Contact</a>
+          <a class="btn btn-header" href="https://seamun.com/forms" target="_blank" rel="noopener noreferrer">Register</a>
         </nav>
+        <button class="nav-toggle" type="button" aria-label="Open menu" data-nav-toggle></button>
+      </div>
+      <div class="nav-dropdown" id="nav-dropdown" hidden>
+        <a href="#about">About</a>
+        <a href="#topic">Topic</a>
+        <a href="#allocations">Allocations</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+        <a href="https://seamun.com/forms" target="_blank" rel="noopener noreferrer">Register</a>
       </div>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
+    <main>
+      <section class="hero">
         <div class="container">
           <div class="hero-inner">
-            <img class="hero-logo" src="./assets/press-logo.png" alt="Press Corps emblem" width="96" height="96" />
-            <p class="hero-badge">January 16–17, 2027 · Group 1</p>
-            <h1 class="hero-title" id="hero-title">Press Corps</h1>
-            <p class="hero-tagline">SEAMUN I · Policies with a Purpose</p>
-            <p class="hero-audience">Specialized media committee · Beginner · Grades 7–12 &amp; university</p>
+            <img
+              class="hero-logo"
+              src="assets/press-logo.png"
+              alt="Press Corps emblem"
+            />
+            <p class="hero-badge">January 16–17, 2027 · Schedule Group 1</p>
+            <h1 class="hero-title">Press Corps</h1>
+            <p class="hero-tagline">Media · Specialized</p>
+            <p class="hero-audience">SEAMUN I — Policies with a Purpose</p>
             <p class="hero-lead">
-              Delegates step away from country blocs to operate as the frontline of information and
-              accountability — reporting on public health and global affairs across SEAMUN I’s ten
-              committees.
+              A beginner specialized media committee for grades 7–12 and university students.
+              Represent a news outlet, cover conference debate, and report on public health and
+              global affairs with 15 delegate seats and 2 editors.
             </p>
+            <div class="meta-pills">
+              <span class="meta-pill">2 Editors</span>
+              <span class="meta-pill">15 Delegates</span>
+              <span class="meta-pill">Beginner</span>
+              <span class="meta-pill">Special ROP</span>
+              <span class="meta-pill">Grades 7–12 &amp; university</span>
+            </div>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#resources">Committee resources</a>
-              <a class="btn btn-secondary" href="https://www.seamun.com/forms.html#delegate" target="_blank" rel="noopener noreferrer">Delegate Sign Up</a>
-              <a class="btn btn-secondary" href="https://www.seamun.com/committees.html" target="_blank" rel="noopener noreferrer">All committees</a>
+              <a class="btn btn-secondary" href="#topic">View topic</a>
+              <a class="btn btn-secondary" href="https://seamun.com/forms#delegate" target="_blank" rel="noopener noreferrer">Delegate Sign Up</a>
+              <a class="btn btn-secondary" href="https://seamun.com/committees" target="_blank" rel="noopener noreferrer">On seamun.com</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="about" aria-labelledby="about-title">
+      <section class="section" id="about">
         <div class="container">
-          <h2 class="section-title" id="about-title">About Press Corps</h2>
+          <h2 class="section-title">About this committee</h2>
           <p class="section-desc">
-            A specialized media committee at SEAMUN I. You represent a news outlet, cover committee
-            debate, interview delegates, and publish under deadline — guided by journalistic ethics
-            rather than standard GA procedure.
+            Press Corps is one of ten committees at SEAMUN I, a student-led, non-profit Model UN conference
+            focused on global healthcare and sustainability. 100% of surplus is donated to the Thai Red Cross Society.
           </p>
-          <div class="stats-grid">
-            <article class="stat-card">
-              <h3>Type</h3>
-              <p>Specialized · Media</p>
-            </article>
-            <article class="stat-card">
-              <h3>Difficulty</h3>
-              <p>Beginner</p>
-            </article>
-            <article class="stat-card">
-              <h3>Editors</h3>
-              <p>2</p>
-            </article>
-            <article class="stat-card">
-              <h3>Delegates</h3>
-              <p>15</p>
-            </article>
-            <article class="stat-card">
-              <h3>Rules of procedure</h3>
-              <p>Special</p>
-            </article>
-            <article class="stat-card">
-              <h3>Audience</h3>
-              <p>Grades 7–12 &amp; university</p>
-            </article>
-          </div>
           <div class="about-grid">
-            <article class="about-card">
-              <h3>What you do</h3>
+            <div class="about-card">
+              <h3>What is Press Corps?</h3>
               <p>
-                Observe debate across committees, investigate claims, run interviews and press
-                conferences, and write balanced coverage that holds the conference’s “Policies with
-                a Purpose” theme accountable.
+                Delegates step away from country blocs to operate as the frontline of information and
+                accountability. You are allocated a news agency, cover committee sessions, interview
+                delegates, and publish under deadline pressure.
               </p>
-            </article>
-            <article class="about-card">
-              <h3>How it differs</h3>
+            </div>
+            <div class="about-card">
+              <h3>Format</h3>
               <p>
-                Press Corps delegates do not represent countries. You are assigned a news agency,
-                follow special media RoP, and are led by editors rather than traditional chairs.
+                <strong>Type:</strong> Specialized · Media · <strong>Difficulty:</strong> Beginner ·
+                <strong>ROP:</strong> Special · <strong>Crisis:</strong> No.
+                Editors lead the committee; delegates report rather than draft GA resolutions.
               </p>
-            </article>
-            <article class="about-card">
-              <h3>Conference context</h3>
+            </div>
+            <div class="about-card">
+              <h3>Conference</h3>
               <p>
-                SEAMUN I is a student-led, non-profit Model UN focused on global healthcare and
-                sustainability. 100% of surplus is donated to the Thai Red Cross Society.
+                <strong>SEAMUN I 2027</strong> — January 16–17 at
+                <a href="https://www.google.com/maps/place/D-PREP+International+School+Secondary+Campus/@13.6448316,100.6850120,17z" target="_blank" rel="noopener noreferrer">D-PREP International School Secondary Campus</a>
+                (Bang Phli, Samut Prakan). Open to grades 7–12 and university students.
               </p>
-            </article>
+            </div>
+            <div class="about-card">
+              <h3>Fees</h3>
+              <p>
+                Delegates: <strong>2,500 THB</strong>. Chairs/Editors: <strong>800 THB</strong>.
+                Photographers &amp; advisors: <strong>0 THB</strong>. Conference capacity:
+                200 delegates, up to 60 staff.
+              </p>
+            </div>
+          </div>
+          <p style="margin-top: 1.25rem">
+            <a class="back-link" href="https://seamun.com" target="_blank" rel="noopener noreferrer">← Back to seamun.com</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="topic">
+        <div class="container">
+          <h2 class="section-title">Topic</h2>
+          <p class="section-desc">One curated topic for SEAMUN I Press Corps.</p>
+          <div class="topic-panel">
+            <h3>
+              <span class="topic-emoji" aria-hidden="true">📰</span>
+              The Question of Determining Journalistic Ethics in Reporting on Public Health and Global Affairs
+            </h3>
+            <span class="difficulty-tag">Beginner</span>
+            <p style="margin-top: 0.85rem">
+              Delegates weigh press freedom, public interest, accuracy, and harm when covering
+              sensitive public-health and global-affairs stories—the same ethical lines you will walk
+              while reporting live at SEAMUN I. Research position papers and follow special media
+              procedure once the chair report and RoP are published.
+            </p>
           </div>
         </div>
       </section>
 
-      <section class="section section-alt" id="topic" aria-labelledby="topic-title">
+      <section class="section" id="allocations">
         <div class="container">
-          <h2 class="section-title" id="topic-title">Agenda topic</h2>
-          <p class="section-desc">One beginner topic for the full committee.</p>
-          <article class="topic-card">
-            <p class="topic-emoji" aria-hidden="true">📰</p>
-            <h3>
-              The Question of Determining Journalistic Ethics in Reporting on Public Health and
-              Global Affairs
-            </h3>
-            <p class="diff-pill">Beginner</p>
-            <p>
-              Delegates weigh press freedom, public interest, accuracy, and harm when covering
-              sensitive public-health and global-affairs stories — the same ethical lines you will
-              walk while reporting live at SEAMUN I.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="allocations" aria-labelledby="allocations-title">
-        <div class="container">
-          <h2 class="section-title" id="allocations-title">Allocations</h2>
+          <h2 class="section-title">Allocations</h2>
           <p class="section-desc">
-            15 news outlets. You will be assigned one when you register.
-            <a href="https://www.seamun.com/committees.html" target="_blank" rel="noopener noreferrer">View on seamun.com</a>
+            15 news-outlet assignments. You will be allocated one when you register as a delegate.
           </p>
-          <ul class="allocation-list">
+          <ul class="allocation-grid">
             <li>Al Jazeera</li>
             <li>BBC News</li>
             <li>CNN</li>
@@ -182,177 +186,136 @@
         </div>
       </section>
 
-      <section class="section section-alt" id="schedule" aria-labelledby="schedule-title">
+      <section class="section" id="schedule">
         <div class="container">
-          <h2 class="section-title" id="schedule-title">Schedule</h2>
+          <h2 class="section-title">Schedule</h2>
           <p class="section-desc">
-            Press Corps is in <strong>Group 1</strong> with UNHRC and DISEC at
-            <a
-              href="https://www.google.com/maps/place/D-PREP+International+School+Secondary+Campus/@13.6448316,100.6850120,17z"
-              target="_blank"
-              rel="noopener noreferrer"
-              >D-PREP International School Secondary Campus</a
-            >
-            (Bang Phli, Samut Prakan).
+            Press Corps follows <strong>Group 1</strong> with UNHRC and DISEC at
+            D-PREP International School Secondary Campus.
           </p>
-          <div class="schedule-grid">
-            <article class="schedule-day">
+          <div class="schedule-grid-local">
+            <div class="schedule-day">
               <h3>Day 1 — Friday, January 16, 2027</h3>
+              <p class="section-desc" style="margin-bottom: 0.75rem">Total debate time: 6 hours</p>
               <ul class="schedule-list">
-                <li><span>7:30</span> Arrival &amp; Registration</li>
-                <li><span>8:30</span> Opening Ceremony</li>
-                <li><span>9:15</span> Break &amp; Photo Ops</li>
-                <li><span>9:45</span> Icebreakers</li>
-                <li><span>10:00</span> Committee Session 1 — Motion Focused</li>
-                <li><span>11:00</span> Lunch (Eat)</li>
-                <li><span>11:30</span> Lunch (Socialise)</li>
-                <li><span>12:00</span> Committee Session 2 — Resolution Writing</li>
-                <li><span>14:30</span> Break &amp; Photo Ops — Resolutions Due</li>
-                <li><span>15:00</span> Committee Session 3 — Voting Procedures</li>
-                <li><span>16:30</span> Feedback Sessions &amp; Delegate Departure</li>
-                <li><span>17:00</span> Chair + SMT Departure</li>
+                <li><span class="time">7:30</span><span>Arrival &amp; Registration</span></li>
+                <li><span class="time">8:30</span><span>Opening Ceremony</span></li>
+                <li><span class="time">9:15</span><span>Break &amp; Photo Ops</span></li>
+                <li><span class="time">9:45</span><span>Icebreakers</span></li>
+                <li><span class="time">10:00</span><span>Committee Session 1 — Motion Focused</span></li>
+                <li><span class="time">11:00</span><span>Lunch (Eat)</span></li>
+                <li><span class="time">11:30</span><span>Lunch (Socialise)</span></li>
+                <li><span class="time">12:00</span><span>Committee Session 2 — Resolution Writing</span></li>
+                <li><span class="time">14:30</span><span>Break &amp; Photo Ops — Resolutions Due</span></li>
+                <li><span class="time">15:00</span><span>Committee Session 3 — Voting Procedures</span></li>
+                <li><span class="time">16:30</span><span>Feedback Sessions &amp; Delegate Departure</span></li>
+                <li><span class="time">17:00</span><span>Chair + SMT Departure</span></li>
               </ul>
-              <p class="schedule-total">Total debate time: 6 hours</p>
-            </article>
-            <article class="schedule-day">
+            </div>
+            <div class="schedule-day">
               <h3>Day 2 — Saturday, January 17, 2027</h3>
+              <p class="section-desc" style="margin-bottom: 0.75rem">Total debate time: 4 hours 45 minutes</p>
               <ul class="schedule-list">
-                <li><span>7:30</span> Arrival</li>
-                <li><span>8:30</span> Registration &amp; Photo Ops</li>
-                <li><span>9:00</span> Committee Session 1 — Motion Focused</li>
-                <li><span>10:00</span> Break</li>
-                <li><span>10:30</span> Committee Session 2 — Motions &amp; Resolution Writing</li>
-                <li><span>12:00</span> Lunch (Socialise)</li>
-                <li><span>12:30</span> Lunch (Eat)</li>
-                <li><span>13:00</span> Committee Session 3 — Resolution Writing</li>
-                <li><span>14:30</span> Break — Resolutions Due</li>
-                <li><span>15:00</span> Committee Session 4 — Voting Procedures</li>
-                <li><span>16:00</span> Feedback &amp; Break</li>
-                <li><span>16:30</span> Closing Ceremony</li>
-                <li><span>17:30</span> Photo Ops &amp; Chair + Delegate Departure</li>
-                <li><span>18:00</span> SMT Departure</li>
+                <li><span class="time">7:30</span><span>Arrival</span></li>
+                <li><span class="time">8:30</span><span>Registration &amp; Photo Ops</span></li>
+                <li><span class="time">9:00</span><span>Committee Session 1 — Motion Focused</span></li>
+                <li><span class="time">10:00</span><span>Break</span></li>
+                <li><span class="time">10:30</span><span>Committee Session 2 — Motions &amp; Resolution Writing</span></li>
+                <li><span class="time">12:00</span><span>Lunch (Socialise)</span></li>
+                <li><span class="time">12:30</span><span>Lunch (Eat)</span></li>
+                <li><span class="time">13:00</span><span>Committee Session 3 — Resolution Writing</span></li>
+                <li><span class="time">14:30</span><span>Break — Resolutions Due</span></li>
+                <li><span class="time">15:00</span><span>Committee Session 4 — Voting Procedures</span></li>
+                <li><span class="time">16:00</span><span>Feedback &amp; Break</span></li>
+                <li><span class="time">16:30</span><span>Closing Ceremony</span></li>
+                <li><span class="time">17:30</span><span>Photo Ops &amp; Chair + Delegate Departure</span></li>
+                <li><span class="time">18:00</span><span>SMT Departure</span></li>
               </ul>
-              <p class="schedule-total">Total debate time: 4 hours 45 minutes</p>
-            </article>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="resources" aria-labelledby="resources-title">
+      <section class="section" id="resources">
         <div class="container">
-          <h2 class="section-title" id="resources-title">Resources</h2>
+          <h2 class="section-title">Resources</h2>
           <p class="section-desc">
-            Official documents and portals will appear here when released by the editors and
-            Secretariat.
+            Official committee materials. Links below are placeholders until documents and portals go live.
           </p>
           <div class="resource-grid">
             <article class="resource-card" id="rop">
-              <p class="resource-label">Coming soon</p>
+              <div class="resource-card-icon" aria-hidden="true">§</div>
+              <span class="badge-soon">Coming soon</span>
               <h3>Rules of Procedure</h3>
               <p>
-                Press Corps uses special media RoP. The full document will be posted here for
-                download once finalized.
+                Special media RoP for Press Corps—coverage rules, editorial standards, and session
+                flow. Document placeholder until editors publish the official guide.
               </p>
-              <a class="btn btn-secondary btn-disabled" href="#" aria-disabled="true" tabindex="-1"
-                >Download RoP — placeholder</a
-              >
+              <a class="btn btn-secondary" href="#rop-placeholder" aria-disabled="true">View ROP</a>
             </article>
-            <article class="resource-card" id="position-paper">
-              <p class="resource-label">Coming soon</p>
-              <h3>Position paper submission</h3>
+            <article class="resource-card" id="position-papers">
+              <div class="resource-card-icon" aria-hidden="true">PP</div>
+              <span class="badge-soon">Coming soon</span>
+              <h3>Position Paper Portal</h3>
               <p>
-                Submit your agency’s position paper through this portal before the conference
-                deadline. Link opens when submissions go live.
+                Submit your agency’s position paper before conference. Portal placeholder—
+                submission link and deadlines will appear here.
               </p>
-              <a class="btn btn-secondary btn-disabled" href="#" aria-disabled="true" tabindex="-1"
-                >Open submission portal — placeholder</a
-              >
+              <a class="btn btn-secondary" href="#pp-placeholder" aria-disabled="true">Open portal</a>
             </article>
             <article class="resource-card" id="chair-report">
-              <p class="resource-label">Coming soon</p>
-              <h3>Chair report</h3>
+              <div class="resource-card-icon" aria-hidden="true">CR</div>
+              <span class="badge-soon">Coming soon</span>
+              <h3>Chair Report</h3>
               <p>
-                Background guide and chair report from the Press Corps editors — research framing,
-                expectations, and key readings for the agenda topic.
+                Background guide from the Press Corps editors: topic framing, research leads, and
+                expectations. Report placeholder until released.
               </p>
-              <a class="btn btn-secondary btn-disabled" href="#" aria-disabled="true" tabindex="-1"
-                >View chair report — placeholder</a
-              >
+              <a class="btn btn-secondary" href="#cr-placeholder" aria-disabled="true">Read report</a>
             </article>
           </div>
-        </div>
-      </section>
 
-      <section class="section section-alt" id="details" aria-labelledby="details-title">
-        <div class="container">
-          <h2 class="section-title" id="details-title">Conference details</h2>
-          <div class="details-list">
-            <div><strong>Dates</strong><span>January 16–17, 2027</span></div>
-            <div>
-              <strong>Location</strong>
-              <span
-                ><a
-                  href="https://www.google.com/maps/place/D-PREP+International+School+Secondary+Campus/@13.6448316,100.6850120,17z"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >D-PREP International School Secondary Campus</a
-                >
-                (Bang Phli, Samut Prakan)</span
-              >
-            </div>
-            <div>
-              <strong>Fees</strong>
-              <span>Delegates: 2,500 THB. Chairs/Editors: 800 THB. Photographers &amp; advisors: 0 THB.</span>
-            </div>
-            <div><strong>Capacity</strong><span>200 delegates, up to 60 staff (including student staff)</span></div>
-            <div><strong>Slogan</strong><span>Policies with a Purpose</span></div>
-            <div><strong>Main site</strong><span><a href="https://www.seamun.com/" target="_blank" rel="noopener noreferrer">seamun.com</a></span></div>
+          <div class="placeholder-panel" id="rop-placeholder" style="margin-top: 1.5rem">
+            <h3>ROP — placeholder</h3>
+            <p>
+              The Press Corps Rules of Procedure PDF (or page) will be linked here. Special media
+              procedure applies; do not rely on standard GA RoP until this document is published.
+            </p>
           </div>
-          <div class="hero-actions details-actions">
-            <a class="btn btn-primary" href="https://www.seamun.com/forms.html#delegate" target="_blank" rel="noopener noreferrer">Delegate Sign Up</a>
-            <a class="btn btn-secondary" href="https://www.seamun.com/forms.html#chair" target="_blank" rel="noopener noreferrer">Chair / Editor Application</a>
+          <div class="placeholder-panel" id="pp-placeholder">
+            <h3>Position paper submission — placeholder</h3>
+            <p>
+              A submission form or upload portal will replace this block. Until then, prepare a
+              position paper on journalistic ethics in public-health and global-affairs reporting
+              for your allocated outlet.
+            </p>
+          </div>
+          <div class="placeholder-panel" id="cr-placeholder">
+            <h3>Chair report — placeholder</h3>
+            <p>
+              The official chair report / background guide will be published here for delegate research
+              ahead of January 16–17, 2027.
+            </p>
           </div>
         </div>
       </section>
 
-      <section class="section" id="faq" aria-labelledby="faq-title">
+      <section class="section" id="contact">
         <div class="container">
-          <h2 class="section-title" id="faq-title">FAQ</h2>
-          <div class="faq">
-            <details>
-              <summary>Do Press Corps delegates represent countries?</summary>
-              <p>
-                No. You are allocated a news agency and work as journalists and editorial staff.
-              </p>
-            </details>
-            <details>
-              <summary>How many topics does Press Corps have?</summary>
-              <p>
-                One: journalistic ethics in reporting on public health and global affairs
-                (beginner).
-              </p>
-            </details>
-            <details>
-              <summary>Is prior MUN experience required?</summary>
-              <p>
-                No. Press Corps is beginner-level and open to grades 7–12 and university students.
-              </p>
-            </details>
-            <details>
-              <summary>What is an editor vs a delegate?</summary>
-              <p>
-                Editors (2) lead the committee like chairs. Delegates (15) report, interview, and
-                publish under editorial guidance.
-              </p>
-            </details>
-            <details>
-              <summary>Where do I register?</summary>
-              <p>
-                Use the forms on
-                <a href="https://www.seamun.com/forms.html" target="_blank" rel="noopener noreferrer">seamun.com/forms</a>
-                for delegate, advisor, and chair/editor applications.
-              </p>
-            </details>
+          <h2 class="section-title">Register &amp; contact</h2>
+          <p class="section-desc">
+            Registration runs through the main SEAMUN I forms. Editors TBD.
+          </p>
+          <div class="hero-actions" style="justify-content: flex-start; margin-top: 1rem">
+            <a class="btn btn-primary" href="https://seamun.com/forms#delegate" target="_blank" rel="noopener noreferrer">Delegate Sign Up</a>
+            <a class="btn btn-secondary" href="https://seamun.com/forms#advisor" target="_blank" rel="noopener noreferrer">Advisor Sign Up</a>
+            <a class="btn btn-secondary" href="https://seamun.com/forms#chair" target="_blank" rel="noopener noreferrer">Chair / Editor Application</a>
+            <a class="btn btn-secondary" href="https://seamun.com/committees" target="_blank" rel="noopener noreferrer">All committees</a>
+          </div>
+          <div class="meta-row" style="margin-top: 1.5rem">
+            <span><strong>Venue:</strong> D-PREP International School Secondary Campus (Bang Phli, Samut Prakan)</span>
+            <span><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61589086223034" target="_blank" rel="noopener noreferrer">SEAMUN I</a></span>
+            <span><strong>Main site:</strong> <a href="https://seamun.com" target="_blank" rel="noopener noreferrer">seamun.com</a></span>
           </div>
         </div>
       </section>
@@ -360,21 +323,37 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <img class="footer-logo" src="./assets/press-logo.png" alt="" width="40" height="40" />
-        <p class="footer-tagline">SEAMUN I Press Corps — Policies with a Purpose</p>
+        <img class="footer-logo" src="assets/press-logo.png" alt="" />
+        <p class="footer-tagline">SEAMUN I — Press Corps · Policies with a Purpose</p>
         <p class="footer-social">
-          <a href="https://www.seamun.com/" target="_blank" rel="noopener noreferrer">seamun.com</a>
-          ·
           <a href="https://www.facebook.com/profile.php?id=61589086223034" target="_blank" rel="noopener noreferrer">Facebook</a>
+          ·
+          <a href="https://seamun.com" target="_blank" rel="noopener noreferrer">seamun.com</a>
         </p>
         <p class="footer-copy">&copy; SEAMUN I 2027</p>
       </div>
     </footer>
     </div>
 
-    <script src="./script.js"></script>
-    <script src="./scripts/committees.js"></script>
-    <script src="./scripts/payment-gate.js"></script>
-    <script src="./scripts/committee-wheel.js"></script>
+    <script>
+      (function () {
+        var bar = document.getElementById("announcement");
+        var btn = document.querySelector("[data-close-announcement]");
+        if (!bar || !btn) return;
+        if (sessionStorage.getItem("press-announcement-dismissed") === "1") {
+          bar.hidden = true;
+          return;
+        }
+        btn.addEventListener("click", function () {
+          bar.hidden = true;
+          sessionStorage.setItem("press-announcement-dismissed", "1");
+        });
+      })();
+    </script>
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/committees.js"></script>
+    <script src="scripts/payment-gate.js"></script>
+    <script src="scripts/committee-wheel.js"></script>
   </body>
 </html>
